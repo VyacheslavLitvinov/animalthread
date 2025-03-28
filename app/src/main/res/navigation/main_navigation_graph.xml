@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation_graph"
+    app:startDestination="@id/friendsFragment">
+
+    <fragment
+        android:id="@+id/friendsFragment"
+        android:name="com.example.animalthread.ui.FriendsFragment"
+        android:label="FriendsFragment" />
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="com.example.animalthread.ui.LibraryFragment"
+        android:label="LibraryFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.animalthread.ui.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/helpFragment2"
+        android:name="com.example.animalthread.ui.HelpFragment"
+        android:label="HelpFragment" />
+</navigation>
