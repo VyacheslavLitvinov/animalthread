@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">animalthread</string>
+    <string name="start">Start!</string>
+    <string name="cat_api_key">live_VC2MHHKzic5tsMd1ueUOBWZ0byO8uZdl8balYGFa9IhdvcMaogYrKVERf7A9hXua</string>
+    <string name="dog_api_key">live_WkSCwvVO9Wi0aUcfUxd7ki4wwrKMuk99cl0eiWzB9gIcwsMXqcwysgRQHK5FymWl</string>
 </resources>

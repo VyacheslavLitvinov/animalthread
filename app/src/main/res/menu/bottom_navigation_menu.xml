@@ -4,23 +4,21 @@
     <item
         android:id="@+id/friendsFragment"
         android:icon="@drawable/baseline_icecream_24"
-
-        android:title="Friends"/>
+        android:title="Friends" />
 
     <item
         android:id="@+id/libraryFragment"
         android:icon="@drawable/baseline_list_alt_24"
-        android:title="Library"/>
+        android:title="Library" />
 
     <item
         android:id="@+id/profileFragment"
         android:icon="@drawable/baseline_cruelty_free_24"
-        android:title="Profile"/>
+        android:title="Profile" />
 
     <item
         android:id="@+id/helpFragment"
         android:icon="@drawable/baseline_handshake_24"
-        android:title="Help"
-        />
+        android:title="Help" />
 
 </menu>
