@@ -1,32 +1,35 @@
 package com.example.animalthread.ui.library
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.animalthread.data.AnimalResponse
-import com.example.animalthread.data.Retrofit
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import androidx.lifecycle.viewModelScope
+import com.example.animalthread.domain.AnimalRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class LibraryViewModel: ViewModel() {
+@HiltViewModel
+class LibraryViewModel @Inject constructor(
+    private val repository: AnimalRepository
+) : ViewModel() {
 
-    val catImage = MutableLiveData<String?>()
+    private val _catImage = MutableStateFlow<String?>(null)
+    val catImage: StateFlow<String?> = _catImage.asStateFlow()
 
-    fun getRandomImage(){
-        Retrofit.api.getAnimal().enqueue(object : Callback<List<AnimalResponse>>{
-            override fun onResponse(
-                call: Call<List<AnimalResponse>>,
-                responce: Response<List<AnimalResponse>>
-            ) {
-                if(responce.isSuccessful && !responce.body().isNullOrEmpty()){
-                    catImage.value = responce.body()!![0].url
-                }
-            }
+    private val _breedName = MutableStateFlow<String?>(null)
+    val breedName: StateFlow<String?> = _breedName.asStateFlow()
 
-            override fun onFailure(call: Call<List<AnimalResponse>>, t: Throwable) {
-                catImage.value = null
-            }
-        })
+    private val _breedTemperament = MutableStateFlow<String?>(null)
+    val breedTemperament: StateFlow<String?> = _breedTemperament.asStateFlow()
+
+    private val _breedOrigin = MutableStateFlow<String?>(null)
+    val breedOrigin: StateFlow<String?> = _breedOrigin.asStateFlow()
+
+    fun getRandomImage() {
+        viewModelScope.launch {
+            _catImage.value.apply {  } = repository.getRandomAnimalUrl()
+        }
     }
-
 }

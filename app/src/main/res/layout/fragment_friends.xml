@@ -63,7 +63,8 @@
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="@id/endGuideline"
         app:layout_constraintStart_toStartOf="@id/startGuideline"
-        app:layout_constraintTop_toBottomOf="@id/image" />
+        app:layout_constraintTop_toBottomOf="@id/image"
+        android:text="Ответ 1"/>
 
     <Button
         android:id="@+id/buttonTwo"
@@ -72,7 +73,8 @@
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="@id/endGuideline"
         app:layout_constraintStart_toStartOf="@id/startGuideline"
-        app:layout_constraintTop_toBottomOf="@id/buttonOne" />
+        app:layout_constraintTop_toBottomOf="@id/buttonOne"
+        android:text="Ответ 2"/>
 
     <Button
         android:id="@+id/buttonThree"
@@ -81,6 +83,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="@id/endGuideline"
         app:layout_constraintStart_toStartOf="@id/startGuideline"
-        app:layout_constraintTop_toBottomOf="@id/buttonTwo"/>
+        app:layout_constraintTop_toBottomOf="@id/buttonTwo"
+        android:text="Ответ 3"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
