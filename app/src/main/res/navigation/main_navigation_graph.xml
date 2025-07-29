@@ -10,7 +10,7 @@
         android:label="FriendsFragment" />
     <fragment
         android:id="@+id/libraryFragment"
-        android:name="com.example.animalthread.ui.LibraryFragment"
+        android:name="com.example.animalthread.ui.library.LibraryFragment"
         android:label="LibraryFragment" />
     <fragment
         android:id="@+id/profileFragment"
