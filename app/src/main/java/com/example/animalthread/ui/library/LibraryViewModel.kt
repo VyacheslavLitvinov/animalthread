@@ -29,7 +29,7 @@ class LibraryViewModel @Inject constructor(
 
     fun getRandomImage() {
         viewModelScope.launch {
-            _catImage.value.apply {  } = repository.getRandomAnimalUrl()
+            _catImage.value = repository.getRandomAnimalUrl()
         }
     }
 }
